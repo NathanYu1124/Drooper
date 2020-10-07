@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CollectionViewItem" customModule="Drooper" customModuleProvider="target">
+            <connections>
+                <outlet property="controlButton" destination="IPE-Sv-had" id="lXk-gb-f2L"/>
+                <outlet property="iconView" destination="BH8-Zo-vJN" id="Z3T-3H-fwb"/>
+                <outlet property="timeLabel" destination="ARg-L5-KPV" id="b5D-d9-drQ"/>
+                <outlet property="titleLabel" destination="1A0-P1-aF3" id="i9p-hG-td4"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ARg-L5-KPV">
+                    <rect key="frame" x="10" y="10" width="65" height="19"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="00:10:25" drawsBackground="YES" id="drB-8V-hrc">
+                        <font key="font" metaFont="system" size="15"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                    </textFieldCell>
+                </textField>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="IPE-Sv-had">
+                    <rect key="frame" x="124" y="10" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="okx-ck-rAO"/>
+                        <constraint firstAttribute="width" constant="16" id="x1N-eL-TQ2"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="play" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="onl-1u-jhw">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="changeEventState:" target="-2" id="d9X-n2-dhN"/>
+                    </connections>
+                </button>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BH8-Zo-vJN">
+                    <rect key="frame" x="10" y="50" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="uSQ-5D-wL3"/>
+                        <constraint firstAttribute="width" constant="20" id="uus-M8-h8R"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="working_white" id="29f-Rq-ZbD"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1A0-P1-aF3">
+                    <rect key="frame" x="38" y="49" width="102" height="21"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="数学课" drawsBackground="YES" id="jT5-JP-27Y">
+                        <font key="font" metaFont="systemBold" size="18"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1A0-P1-aF3" secondAttribute="trailing" constant="10" id="6lX-Xb-eqY"/>
+                <constraint firstItem="ARg-L5-KPV" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="WNF-Tw-NFN"/>
+                <constraint firstAttribute="trailing" secondItem="IPE-Sv-had" secondAttribute="trailing" constant="10" id="Xvr-Jn-gXL"/>
+                <constraint firstItem="BH8-Zo-vJN" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="Zvy-bk-UGW"/>
+                <constraint firstAttribute="bottom" secondItem="ARg-L5-KPV" secondAttribute="bottom" constant="10" id="aMJ-Wg-RW8"/>
+                <constraint firstItem="1A0-P1-aF3" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="beG-53-kjb"/>
+                <constraint firstItem="BH8-Zo-vJN" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="byv-un-Peq"/>
+                <constraint firstItem="1A0-P1-aF3" firstAttribute="leading" secondItem="BH8-Zo-vJN" secondAttribute="trailing" constant="8" id="hU2-eQ-QfN"/>
+                <constraint firstAttribute="bottom" secondItem="IPE-Sv-had" secondAttribute="bottom" constant="10" id="wqx-Ci-WRn"/>
+            </constraints>
+            <point key="canvasLocation" x="-135" y="154"/>
+        </customView>
+        <collectionViewItem id="mrO-Uk-cHA" customClass="CollectionViewItem" customModule="Drooper" customModuleProvider="target"/>
+    </objects>
+    <resources>
+        <image name="play" width="64" height="64"/>
+        <image name="working_white" width="64" height="64"/>
+    </resources>
+</document>
